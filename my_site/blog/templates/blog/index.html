@@ -6,17 +6,11 @@
     {%endblock%}
 
     {%block css_files%}
+        <link rel="stylesheet" href="{%static "blog/post.css"%}"/>
         <link rel="stylesheet" href="{%static "blog/index.css"%}"/>
     {%endblock%}
 
     {%block content%}
-        <header id="main-navigation">
-            <h1><a href="">Lucas blog</a></h1>
-            <nav>
-                <a href="">All posts</a>
-            </nav>
-        </header>
-
         <section id="welcome">
             <header>
                 <img src="" alt="LUCAS - the autor of this blog"/>
@@ -29,17 +23,7 @@
             <h2>my lastests thoughts</h2>
 
             <ul>
-                <li>
-                    <article class="post">
-                        <a href="">
-                            <img src="" alt="montain hiking"/>
-                            <div class="post__content">
-                                <h3>montain hiking</h3>
-                                <p>ksdnfkjsnfç çsdfçslkdf lsdfjlksdfml ldkjfklsdfmsdjfkls jksdfklsjdflksjd lksjdfhewp9qunfpiq efuhqweopfjwperfnowf efp9wjef0jef=0</p>
-                            </div>
-                        </a>
-                    </article>
-                </li>
+                {%include "blog/includes/post.html"%}
             </ul>
         </section>
 
