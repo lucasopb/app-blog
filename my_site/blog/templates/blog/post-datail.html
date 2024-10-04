@@ -4,7 +4,7 @@
 
 
 {%block page_title%}
-Post title
+ {{post.title}}
 {%endblock%}
 
 {%block css_files%}
@@ -13,19 +13,17 @@ Post title
 
 {%block content%}
     <section id="summary">
-        <h2>post title</h2>
+        <h2>By {{post.title}}</h2>
         <article>
             <img src="" alt="post title"/>
-            <address>By lucas</address>
+            <address>{{post.author}}</address>
             <div>
-                lat updated on <time>july 10th</time>
+                last updated on <time>{{post.date|date:"d M Y"}}</time>
             </div>
         </article>
     </section>
 
     <main>
-        <p>lore asjdoifplas çaksldjf quepn q9w8hefpqwo p9mclpkd fpodmcwp ecnjffpioqh9p qp9ueiownk apokdcclksiui iwquhoaipqá oijpjifaçaodqp akjnp fponapkld</p>
-        <p>lore asjdoifplas çaksldjf quepn q9w8hefpqwo p9mclpkd fpodmcwp ecnjffpioqh9p qp9ueiownk apokdcclksiui iwquhoaipqá oijpjifaçaodqp akjnp fponapkld</p>
-        <p>lore asjdoifplas çaksldjf quepn q9w8hefpqwo p9mclpkd fpodmcwp ecnjffpioqh9p qp9ueiownk apokdcclksiui iwquhoaipqá oijpjifaçaodqp akjnp fponapkld</p>
+        {{post.content|linebreaks}}
     </main>
 {%endblock%}

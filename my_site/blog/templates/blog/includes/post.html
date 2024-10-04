@@ -2,11 +2,12 @@
 
 <li>
     <article class="post">
-        <a href="{%url "post-datails-page"  "the-montains"%}">
+        <a href="{%url "post-datails-page"  post.slug%}">
             <img src="" alt="Montain Hiking"/>
             <div class="post__content">
-                <h3>montain hiking</h3>
-                <p>ksdnfkjsnfç çsdfçslkdf lsdfjlksdfml ldkjfklsdfmsdjfkls jksdfklsjdflksjd lksjdfhewp9qunfpiq efuhqweopfjwperfnowf efp9wjef0jef=0</p>
+                <h3>{{post.title}}</h3>
+                <p>{{post.excerpt}}</p>
             </div>
         </a>
     </article>
+</li>
